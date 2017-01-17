@@ -11,7 +11,7 @@ const athletes = [
 		'position': 'Forward',
 		'upvotes': 429,
 		'image': 'neymar-jr.png',
-		'cover': 'neymar-jr-cover.png',
+		'cover': 'neymar-jr-cover.jpg',
 		'link': 'https://en.wikipedia.org/wiki/Neymar',
 		'goals': 129,
 		'honours': [
@@ -50,7 +50,7 @@ const athletes = [
 		'position': 'Forward',
 		'upvotes': 698,
 		'image': 'lionel-messi.jpg',
-		'cover': 'lionel-messi-cover.png',
+		'cover': 'lionel-messi-cover.jpg',
 		'link': 'https://en.wikipedia.org/wiki/Lionel_Messi',
 		'goals': 723,
 		'honours': [
@@ -84,7 +84,7 @@ const athletes = [
 		'position': 'Forward',
 		'upvotes': 476,
 		'image': 'zlatan-ibrahimovic.jpg',
-		'cover': 'zlatan-ibrahimovic-cover.png',
+		'cover': 'zlatan-ibrahimovic-cover.jpg',
 		'link': 'https://en.wikipedia.org/wiki/Zlatan_Ibrahimović',
 		'goals': 528,
 		'honours': [
