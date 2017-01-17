@@ -165,6 +165,7 @@ const athletes = [
 		'active': true,
 		'current_team': 'Borussia Dortmund',
 		'position': 'Forward',
+		'description': 'Pierre-Emerick Aubameyang is a gabonese soccer player who plays as forward',
 		'upvotes': 387,
 		'image': 'pierre-aubameyang.jpg',
 		'cover': 'pierre-aubameyang-cover.jpg',

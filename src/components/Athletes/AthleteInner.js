@@ -13,12 +13,31 @@ class AthleteInner extends React.Component {
 
 		return (
 			<div className="athlete-inner">
-				<header style={{ backgroundImage: bgImage }}>
-					<figure className="athlete-profile">
-						<img src={'/public/img/' + ourSoccerStar.image } />
-					</figure>
-					<h2 className="athlete-profile-name">{ourSoccerStar.known_as}</h2>
+				<header>
+					<div style={{ backgroundImage: bgImage }} className="cover">
+						<figure className="athlete-profile">
+							<img src={'/public/img/' + ourSoccerStar.image } />
+						</figure>
+						<h2 className="athlete-profile-name">{ourSoccerStar.known_as}</h2>
+					</div>
+					<div className="athlete-tabs">
+						<div className="athlete-tab inactive-tab">
+
+						</div>
+						<div className="athlete-tab">
+							Main
+						</div>
+						<div className="athlete-tab">
+							Media
+						</div>
+						<div className="athlete-tab">
+							Chat
+						</div>
+					</div>
 				</header>
+				<div className="athlete-content">
+
+				</div>
 			</div>
 		);
 	}
