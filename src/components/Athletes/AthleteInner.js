@@ -7,9 +7,19 @@ class AthleteInner extends React.Component {
 		const { id } = this.props.params;
 
 		const ourSoccerStar = athletes.filter((athlete) => athlete.id === id)[0];
+		const bgImage = `url("/public/img/${ourSoccerStar.cover}")`;
+
+		console.log(bgImage);
 
 		return (
-			<div>Hello, {ourSoccerStar.known_as}</div>
+			<div className="athlete-inner">
+				<header style={{ background: bgImage }}>
+					<figure className="athlete-profile">
+						<img src={'/public/img/' + ourSoccerStar.image } />
+					</figure>
+					<h2 className="athlete-profile-name">{ourSoccerStar.known_as}</h2>
+				</header>
+			</div>
 		);
 	}
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import VoteSnippet from 'components/VoteSnippet';
+import { Link } from 'react-router';
 
 const AthleteList = ({ athlete, onThumbsUp }) => {
 	return (
