@@ -5,13 +5,15 @@ const AthleteList = ({ athlete, onThumbsUp }) => {
 	return (
 		<div className="list-item">
 			<div className="item-image">
-				<a href={'/athletes/' + athlete.id }>
+				<Link to={`athlete/${athlete.id}`}>
 					<img className="athlete-image" src={'/public/img/' + athlete.image } />
-				</a>
+				</Link>
 			</div>
 			<div className="item-name">
 				<h2>
-					<a href={'/athletes/' + athlete.id }>{ athlete.known_as }</a>
+					<Link to={`athlete/${athlete.id}`}>
+						{ athlete.known_as }
+					</Link>
 				</h2>
 			</div>
 			<div className="item-votes">

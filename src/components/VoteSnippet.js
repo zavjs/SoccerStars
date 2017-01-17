@@ -8,7 +8,7 @@ const VoteSnippet = ({ onThumbsUp, upvotes, isVoted }) => {
 				{upvotes}
 			</span>
 		</span> 
-	)
+	);
 };
 
 export default VoteSnippet;

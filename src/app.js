@@ -1,11 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Router, Route, browserHistory } from 'react-router'
-import App from 'components/App'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import AppRoutes from 'components/AppRoutes';
 
-const Routes = () => 
-	<Router history={browserHistory}>
-		<Route path="/" component={App} />
-	</Router>
-
-ReactDOM.render(<Routes />, document.getElementById("app")); 
+ReactDOM.render(<AppRoutes />, document.getElementById("app")); 

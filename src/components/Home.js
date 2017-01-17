@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import Athletes from 'components/Athletes/Athletes'
-import ControlPanel from 'components/ControlPanel/ControlPanel'
+import Athletes from 'components/Athletes/Athletes';
+import ControlPanel from 'components/ControlPanel/ControlPanel';
 
-import athletesData from 'data/athletes'
+import athletesData from 'data/athletes';
 
 export default class App extends Component {
 	constructor (props) {
@@ -114,6 +114,6 @@ export default class App extends Component {
 					onThumbsUp={this.onThumbsUp} 
 					athletes={this.state.athletes} />
 			</div>
-		)
+		);
 	}
 }
