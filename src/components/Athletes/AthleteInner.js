@@ -13,7 +13,7 @@ class AthleteInner extends React.Component {
 
 		return (
 			<div className="athlete-inner">
-				<header style={{ background: bgImage }}>
+				<header style={{ backgroundImage: bgImage }}>
 					<figure className="athlete-profile">
 						<img src={'/public/img/' + ourSoccerStar.image } />
 					</figure>
