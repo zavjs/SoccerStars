@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
-var gutil = require('gulp-util');
 var imagemin = require('gulp-imagemin');
 
 gulp.task('img-compress', function () {
@@ -17,9 +16,9 @@ gulp.task('styles', function () {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-		.pipe(cssmin)
-		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('./dist'));
+		.pipe(cssmin())
+		.pipe(rename({ suffix: '.min' }))
+		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('build', function () {
