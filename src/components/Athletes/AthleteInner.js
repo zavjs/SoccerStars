@@ -1,5 +1,6 @@
 import React from 'react';
 import athletes from 'data/athletes';
+import { Link } from 'react-router';
 
 class AthleteInner extends React.Component {
 	render () {
@@ -24,14 +25,14 @@ class AthleteInner extends React.Component {
 						<div className="athlete-tab inactive-tab">
 
 						</div>
-						<div className="athlete-tab">
-							Main
+						<div className="athlete-tab active">
+							<Link to={`/athlete/${ourSoccerStar.id}/main`}>Main</Link>
 						</div>
 						<div className="athlete-tab">
-							Media
+							<Link to={`/athlete/${ourSoccerStar.id}/media`}>Media</Link>
 						</div>
 						<div className="athlete-tab">
-							Chat
+							<Link to={`/athlete/${ourSoccerStar.id}/chat`}>Chat</Link>
 						</div>
 					</div>
 				</header>
