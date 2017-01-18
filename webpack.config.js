@@ -4,11 +4,12 @@ const join = path.join;
 const webpack = require('webpack');
 const root = resolve(__dirname);
 const src = join(root, 'src');
+const dist = join(root, 'dist');
 
 module.exports = {
 	entry: './src/app.js',
 	output: {
-		path: join(src, 'static', 'js'),
+		path: join(dist, 'static', 'js'),
 		filename: 'bundle.js'
 	},
 	module: {

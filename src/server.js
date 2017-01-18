@@ -5,7 +5,7 @@ var app = express();
 var PORT = process.env.port || 3000;
 
 app.set('view engine', 'pug');
-app.use('/public', express.static('./src/static'));
+app.use('/public', express.static('./dist/static'));
 
 app.get('/', function (req, res) {
 	res.render('index')
