@@ -16,11 +16,11 @@ gulp.task('styles', function () {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-		.pipe(cssmin())
+		/*.pipe(cssmin())*/
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('dist'));
 });
 
-gulp.task('build', function () {
+gulp.task('watch:styles', function () {
 	gulp.watch('./src/**/*.css', ['styles']);
 });
