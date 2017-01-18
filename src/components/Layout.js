@@ -5,7 +5,7 @@ export default class Layout extends React.Component {
     render() {
         return (
             <div className="app-container">
-                <header>
+                <header className="main-header">
                     <h2 className="page-title text-center">
                         <Link to="/">Soccer <br /> Legends</Link>
                     </h2>

@@ -19,11 +19,13 @@ body {
 }
 
 .app-container {
-	max-width: 768px;
+}
+
+.app-content {
+	max-width: 968px;
 	margin: 0 auto;
 	/*background-color: #fff;
 	border: 1px solid #f2f2f2;*/
-	padding: 10px;
 }
 
 .page-title {
@@ -32,9 +34,15 @@ body {
 	font-weight: bold;
 	text-shadow: 1px 2px 2px green;
 	color: #fff;
-	margin-top: 0;
-	margin-bottom: .5em;
+	margin: 0 auto;
+	/* padding: 10px 0; */
+	display: inline-block;
+	position: relative;
+	z-index: 3;
+	padding: 4px 0;
 }
+
+h2.page-title.text-center {}
 
 .page-title a {
 	color: #d9d999;
@@ -42,9 +50,7 @@ body {
 }
 
 .athletes {
-	margin-top: 10px;
 	padding: 10px;
-	border: 1px solid #d9d9d9;
 }
 
 .athlete {
@@ -91,7 +97,7 @@ body {
 }
 
 .wrapper {
-	margin: 0 auto;
+	border: 1px solid #d9d9d9;
 }
 
 .toggle-button {
@@ -204,7 +210,6 @@ body {
 .control-panel {
 	background-color: #f2f2f2;
 	padding: 10px;
-	border: 1px solid #d9d9d9;
 }
 
 .control-panel > div {
@@ -303,6 +308,38 @@ footer span {
 footer p {
 	margin: 0;
 }
+
+.main-header {
+	background-color: #fff;
+	text-align: center;
+	z-index: 2;
+	overflow: hidden;
+}
+
+h2.page-title.text-center::after {
+    content: "";
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background-image: url(/public/img/soccer-ball22.png);
+    top: -10px;
+    right: -60px;
+    z-index: -1;
+    background-size: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0.4;
+    animation:spin 5s linear infinite;
+    transition: all 2s;
+}
+
+h2.page-title:hover ::after {
+	width: 110%;
+	height: 110%;
+}
+@keyframes spin { 100% { transform:rotate(360deg); } }
+
 @media only screen and (min-width: 481px) {
 	.athlete.grid {
 		display: inline-block;
@@ -351,6 +388,11 @@ footer p {
 }
 
 @media only screen and (min-width: 768px) {
-	.app-container {
+	.athlete.grid {
+		width: calc(25% - 1em);
+	}
+
+	.app-content {
+		padding-top: 25px
 	}
 }
