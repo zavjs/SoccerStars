@@ -7,7 +7,7 @@ app.set('port', (process.env.PORT || 5000));
 app.set('view engine', 'pug');
 app.use('/public', express.static('./dist/static'));
 
-app.get('/', function (req, res) {
+app.get('*', function (req, res) {
 	res.render('index');
 });
 
