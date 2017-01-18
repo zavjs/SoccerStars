@@ -2,15 +2,15 @@ var express = require('express');
 
 var app = express();
 
-var PORT = process.env.port || 3000;
+app.set('port', (process.env.PORT || 5000));
 
 app.set('view engine', 'pug');
 app.use('/public', express.static('./dist/static'));
 
 app.get('/', function (req, res) {
-	res.render('index')
+	res.render('index');
 });
 
-app.listen(PORT, function () {
-	console.log('Listening on', PORT);
+app.listen(app.get('port'), function () {
+	console.log('Listening on', app.get('port'));
 });
