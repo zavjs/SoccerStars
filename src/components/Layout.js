@@ -14,7 +14,8 @@ export default class Layout extends React.Component {
 
                 <footer className="text-center">
                     <p role="link">
-                        <span>Checkout the</span>
+                        Made by <a target="_blank" href="https://github.com/zavjs">H. Zavareze</a><br />
+                        <span>Check out the</span>
                         <a aria-label="This project's Github Repository"
                            target="_blank" href="https://github.com/zavjs/SoccerStars">
                              Github Repository
