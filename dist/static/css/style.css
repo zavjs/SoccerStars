@@ -109,6 +109,7 @@ body {
 
 /* LIST VERSION */
 .list-item {
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -117,6 +118,7 @@ body {
 }
 
 .item-name {
+	-ms-flex-positive: 1;
 	flex-grow: 1;
 	padding: 18px 10px 0 20px;
 }

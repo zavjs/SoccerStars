@@ -19,22 +19,22 @@ class AthleteInner extends React.Component {
 							<img 
 								src={'/public/img/' + ourSoccerStar.image } />
 						</figure>
-						<h2 className="athlete-profile-name">{ourSoccerStar.known_as}</h2>
+						<h2 className="athlete-profile-name text-center">{ourSoccerStar.known_as}</h2>
 					</div>
 					<div className="athlete-tabs">
-						<div className="athlete-tab inactive-tab">
+						<div className="athlete-tab text-center inline-block inactive-tab">
 
 						</div>
-						<div className="athlete-tab active">
+						<div className="athlete-tab text-center inline-block active">
 							<Link to={`/athlete/${ourSoccerStar.id}/main`}>Main</Link>
 						</div>
-						<div className="athlete-tab">
+						<div className="athlete-tab text-center inline-block ">
 							<Link to={`/athlete/${ourSoccerStar.id}/chat`}>Chat</Link>
 						</div>
-						<div className="athlete-tab">
+						<div className="athlete-tab text-center inline-block ">
 							<Link to={`/athlete/${ourSoccerStar.id}/photos`}>Photos</Link>
 						</div>
-						<div className="athlete-tab">
+						<div className="athlete-tab text-center inline-block ">
 							<Link to={`/athlete/${ourSoccerStar.id}/videos`}>Videos</Link>
 						</div>
 					</div>

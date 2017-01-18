@@ -6,13 +6,13 @@ export default class Layout extends React.Component {
         return (
             <div className="app-container">
                 <header>
-                    <h2 className="page-title">
+                    <h2 className="page-title text-center">
                         <Link to="/">Soccer <br /> Legends</Link>
                     </h2>
                 </header>
                 <div className="app-content">{this.props.children}</div>
 
-                <footer>
+                <footer className="text-center">
                     <p role="link">
                         <span>Checkout the</span>
                         <a aria-label="This project's Github Repository"

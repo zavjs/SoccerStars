@@ -18,7 +18,7 @@ const AthleteGrid = ({ athlete, onThumbsUp }) => {
 			<VoteSnippet onThumbsUp={onThumbsUp} isVoted={athlete.voted} upvotes={athlete.upvotes} />
 
 			<div className="athlete-bottom-info">
-				<h2 className="athlete-name inline-block" key={athlete.id}>
+				<h2 className="athlete-name text-center inline-block" key={athlete.id}>
 					<Link to={`athlete/${athlete.id}`}>
 						{ athlete.known_as }
 					</Link> 
