@@ -3,11 +3,16 @@ import VoteSnippet from 'components/VoteSnippet';
 import { Link } from 'react-router';
 
 const AthleteList = ({ athlete, onThumbsUp }) => {
+	const pic_alt = athlete.known_as + ' main picture.';
+
 	return (
 		<div className="list-item">
 			<div className="item-image">
 				<Link to={`athlete/${athlete.id}`}>
-					<img className="athlete-image" src={'/public/img/' + athlete.image } />
+					<img 
+						className="athlete-image" 
+						src={'/public/img/' + athlete.image } 
+						alt={pic_alt} />
 				</Link>
 			</div>
 			<div className="item-name">

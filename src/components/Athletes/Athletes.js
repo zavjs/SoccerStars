@@ -25,7 +25,7 @@ const whatToSort = (param) => {
 const Athletes = ({ athletes, onThumbsUp, template, query, sorting }) => {
 
 	return (
-		<div className="athletes">
+		<div className="athletes blunt-bg ">
 			{ 
 				athletes.filter(shouldFilter(query)).sort(whatToSort(sorting)).map((athlete) => {
 					return (

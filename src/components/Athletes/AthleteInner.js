@@ -9,15 +9,15 @@ class AthleteInner extends React.Component {
 
 		const ourSoccerStar = athletes.filter((athlete) => athlete.id === id)[0];
 		const bgImage = `url("/public/img/${ourSoccerStar.cover}")`;
-
-		console.log(bgImage);
+		const pic_alt = ourSoccerStar.known_as + ' main picture.';
 
 		return (
 			<div className="athlete-inner">
 				<header>
 					<div style={{ backgroundImage: bgImage }} className="cover">
 						<figure className="athlete-profile">
-							<img src={'/public/img/' + ourSoccerStar.image } />
+							<img 
+								src={'/public/img/' + ourSoccerStar.image } />
 						</figure>
 						<h2 className="athlete-profile-name">{ourSoccerStar.known_as}</h2>
 					</div>
@@ -29,10 +29,13 @@ class AthleteInner extends React.Component {
 							<Link to={`/athlete/${ourSoccerStar.id}/main`}>Main</Link>
 						</div>
 						<div className="athlete-tab">
-							<Link to={`/athlete/${ourSoccerStar.id}/media`}>Media</Link>
+							<Link to={`/athlete/${ourSoccerStar.id}/chat`}>Chat</Link>
 						</div>
 						<div className="athlete-tab">
-							<Link to={`/athlete/${ourSoccerStar.id}/chat`}>Chat</Link>
+							<Link to={`/athlete/${ourSoccerStar.id}/photos`}>Photos</Link>
+						</div>
+						<div className="athlete-tab">
+							<Link to={`/athlete/${ourSoccerStar.id}/videos`}>Videos</Link>
 						</div>
 					</div>
 				</header>

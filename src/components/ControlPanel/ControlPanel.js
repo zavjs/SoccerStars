@@ -3,13 +3,13 @@ import { Link } from 'react-router';
 
 const ControlPanel = ({ onToggleView, onToggleSort, onSearch, onErase, template, query, sorting }) => {
 
-	const buttonClass = 'toggle-button toggle-button-standard';
+	const buttonClass = 'toggle-button inline-block blunt-bg toggle-button-standard';
 	const spitClassNames = (...classNames) => classNames.join(' ')
 
 	return (
 		<div className="control-panel">
 			<div className="controls">
-				<div className="view-controls">
+				<div className="view-controls inline-block">
 					<span id="grid" onClick={onToggleView} className={ template == 'grid' ? spitClassNames('active', buttonClass) : buttonClass }>
 						<i className="fa fa-th" />
 					</span>
@@ -17,7 +17,7 @@ const ControlPanel = ({ onToggleView, onToggleSort, onSearch, onErase, template,
 						<i className="fa fa-list" />
 					</span>
 				</div>
-				<div className="sorting">
+				<div className="sorting inline-block">
 					<span id="name-sort" onClick={onToggleSort} className={ sorting == 'name-sort' ? spitClassNames('active', buttonClass) : buttonClass }>
 						<i className="fa fa-sort-alpha-asc" />
 					</span>
