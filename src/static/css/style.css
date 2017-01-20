@@ -456,7 +456,7 @@ footer p {
 
 @media only screen and (min-width: 768px) {
 	.grid {
-		width: calc(20% - 1em);
+		width: calc(16.666666667% - 1em);
 	}
 
 	.app-content {
