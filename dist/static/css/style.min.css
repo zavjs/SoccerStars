@@ -286,7 +286,7 @@ h2.page-title.text-center {}
 	border-right: 7px solid transparent;
 	border-bottom: 7px solid #e9eaed;
 	position: absolute;
-	bottom: -1px;
+	bottom: 0;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
@@ -314,6 +314,7 @@ footer p {
 	text-align: center;
 	z-index: 2;
 	overflow: hidden;
+	background-color: #f2f2f2;
 }
 
 h2.page-title.text-center::after {
@@ -338,7 +339,51 @@ h2.page-title:hover ::after {
 	width: 110%;
 	height: 110%;
 }
-@keyframes spin { 100% { transform:rotate(360deg); } }
+
+.athlete-content {
+	margin-top: 10px;
+}
+
+
+.athlete-info,
+.twitter-feed {
+	padding: 10px;
+    background-color: #fff;
+    border: 1px solid #f2f2f2;
+}
+
+.athlete-info {
+    margin-top: 10px;
+    position: relative;
+}
+
+.athlete-info i {
+	position: absolute;
+	top: 7px;
+	left: 9px;
+	padding: 5px;
+	width: 25px;
+	height: 25px;
+	background-color: #fff;
+	border: 1px solid #d2d2d2;
+	border-radius: 12px;
+	text-align: center;
+	color: #337ab7;
+}
+
+.athlete-info p {
+	text-indent: 30px;
+}
+
+.twitter-status {
+	border-bottom: 1px solid #f2f2f2;
+}
+
+@keyframes spin { 
+	100% { 
+		transform:rotate(360deg); 
+	} 
+}
 
 @media only screen and (min-width: 481px) {
 	.athlete.grid {
@@ -394,5 +439,12 @@ h2.page-title:hover ::after {
 
 	.app-content {
 		padding-top: 25px
+	}
+
+	.athlete-info {
+		width: calc(45% - 1em);
+		padding: 19px 15px;
+		display: inline-block;
+		margin: 0 1em 0 0;
 	}
 }
