@@ -6,6 +6,18 @@ import AthleteHeader from 'components/Athlete/AthleteHeader';
 
 class AthleteInner extends React.Component {
 
+	constructor (props) {
+		super(props);
+		this.state = {
+			tweets: []
+		};
+	}
+
+	componentDidMount() {
+		fetch('https://jsonplaceholder.typicode.com')
+			.then((response) => { console.log( response )});
+	}
+
 	render () {
 		const { id } = this.props.params;
 
