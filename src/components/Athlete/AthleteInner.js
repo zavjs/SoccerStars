@@ -14,8 +14,7 @@ class AthleteInner extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch('https://jsonplaceholder.typicode.com')
-			.then((response) => { console.log( response )});
+	
 	}
 
 	render () {
