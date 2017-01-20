@@ -8,7 +8,7 @@ const AthleteList = ({ athlete, onThumbsUp }) => {
 	return (
 		<div className="list-item">
 			<div className="item-image">
-				<Link to={`athlete/${athlete.id}`}>
+				<Link to={`athlete/${athlete.id}/main`}>
 					<img 
 						className="athlete-image" 
 						src={'/public/img/' + athlete.image } 
@@ -17,7 +17,7 @@ const AthleteList = ({ athlete, onThumbsUp }) => {
 			</div>
 			<div className="item-name">
 				<h2>
-					<Link to={`athlete/${athlete.id}`}>
+					<Link to={`athlete/${athlete.id}/main`}>
 						{ athlete.known_as }
 					</Link>
 				</h2>

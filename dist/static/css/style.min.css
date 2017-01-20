@@ -1,5 +1,6 @@
+
 body {
-	background-color: #fafafa;
+	background-color: #f7f7f7;
 }
 
 * {
@@ -23,15 +24,14 @@ body {
 }
 
 .page-title {
-	font-size: 3em;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-shadow: 1px 2px 2px #222;
-    margin: 0 auto;
-    display: inline-block;
-    position: relative;
-    z-index: 3;
-    padding: 4px 0;
+	font-size: 2em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 2px 2px #222;
+	margin: 0 auto;
+	display: inline-block;
+	position: relative;
+	z-index: 3;
 }
 
 .page-title a {
@@ -49,6 +49,7 @@ body {
     position: relative;
     width: calc(50% - .75em);
     min-height: 75px;
+    margin: 0 0.375em;
 }
 
 .athlete-name a {
@@ -123,9 +124,9 @@ body {
     padding-right: 15px;
 }
 
-.item-name {
-	font-size: 1.2em;
-	margin: 10px 0;
+.item-name h2 {
+	font-size: 1.25em;
+	margin: 0;
 }
 
 .list:nth-child(even) {
@@ -268,7 +269,7 @@ body {
 	height: 0;
 	border-left: 7px solid transparent;
 	border-right: 7px solid transparent;
-	border-bottom: 7px solid #e9eaed;
+	border-bottom: 7px solid #f7f7f7;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -294,15 +295,16 @@ footer p {
 
 .main-header {
 	text-align: center;
-    z-index: 2;
-    overflow: hidden;
-    background-color: #fff;
+	z-index: 2;
+	overflow: hidden;
+	background-color: #fff;
+	height: 60px;
 }
 
 .page-title::after {
     content: "";
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     position: absolute;
     background-image: url(/public/img/soccer-ball22.png);
     top: -10px;
@@ -325,6 +327,9 @@ footer p {
 	margin: 0.75em;
 }
 
+.list {
+	width: 100%;
+}
 
 .athlete-info,
 .twitter-feed,
@@ -334,6 +339,10 @@ footer p {
 	border: 1px solid #f2f2f2;
 	width: 100%;
 	margin-bottom: 0.75em;
+}
+
+.athlete-basic-info {
+	width: 100%;
 }
 
 .athlete-info {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Athletes from 'components/Athletes/Athletes';
+import Athletes from 'components/Home/Athletes';
 import ControlPanel from 'components/ControlPanel/ControlPanel';
 
 import athletesData from 'data/athletes';

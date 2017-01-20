@@ -8,7 +8,7 @@ const AthleteGrid = ({ athlete, onThumbsUp }) => {
 
 	return(
 		<div className="grid-wrapper">
-			<Link to={`athlete/${athlete.id}`}>
+			<Link to={`athlete/${athlete.id}/main`}>
 				<img 
 					className="athlete-image" 
 					src={'/public/img/' + athlete.image } 
@@ -19,7 +19,7 @@ const AthleteGrid = ({ athlete, onThumbsUp }) => {
 
 			<div className="athlete-bottom-info">
 				<h2 className="athlete-name text-center inline-block" key={athlete.id}>
-					<Link to={`athlete/${athlete.id}`}>
+					<Link to={`athlete/${athlete.id}/main`}>
 						{ athlete.known_as }
 					</Link> 
 				</h2>
