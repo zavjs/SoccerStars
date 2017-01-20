@@ -2,6 +2,10 @@ const athletes = [
 	{
 		'id': 'neymar-jr',
 		'known_as': 'Neymar',
+		'description': 'Neymar da Silva Santos Júnior, born 5 February 1992),' + 
+			' commonly known as Neymar or Neymar Jr., is a Brazilian professional ' + 
+			'footballer who plays as a forward for Spanish club FC Barcelona and the ' + 
+			'Brazil national team.',
 		'name': 'Neymar Jr.',
 		'country': 'bra',
 		'birth': '1992',

@@ -20,27 +20,23 @@ body {
 .app-content {
 	max-width: 968px;
 	margin: 0 auto;
-	/*background-color: #fff;
-	border: 1px solid #f2f2f2;*/
 }
 
 .page-title {
 	font-size: 3em;
-	text-transform: uppercase;
-	font-weight: bold;
-	text-shadow: 1px 2px 2px green;
-	color: #fff;
-	margin: 0 auto;
-	/* padding: 10px 0; */
-	display: inline-block;
-	position: relative;
-	z-index: 3;
-	padding: 4px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 2px 2px #222;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    padding: 4px 0;
 }
 
 .page-title a {
-	color: #d9d999;
-	text-decoration: none;
+	color: #d34;
+    text-decoration: none;
 }
 
 .athletes {
@@ -52,7 +48,6 @@ body {
     padding: 0;
     position: relative;
     width: calc(50% - .75em);
-    /* min-width: 150px; */
     min-height: 75px;
 }
 
@@ -299,9 +294,9 @@ footer p {
 
 .main-header {
 	text-align: center;
-	z-index: 2;
-	overflow: hidden;
-	background-color: #f2f2f2;
+    z-index: 2;
+    overflow: hidden;
+    background-color: #fff;
 }
 
 .page-title::after {
@@ -316,7 +311,7 @@ footer p {
     left: 0;
     right: 0;
     margin: 0 auto;
-    opacity: 0.4;
+    opacity: 0.8;
     animation:spin 5s linear infinite;
     transition: all 2s;
 }
