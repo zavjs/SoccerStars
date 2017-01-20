@@ -1,6 +1,11 @@
 import React from 'react';
+import Honours from 'components/Athlete/Honours';
+import SuggestLink from 'components/SuggestLink';
 
-const BasicInfo = ({ description }) => {
+const BasicInfo = ({ description, honours, athleteId }) => {
+
+	const noDescription = 'This athlete has no description. Suggest one.';
+
 	return (
 		<div className="athlete-basic-info">
 			<div className="athlete-info">
@@ -10,34 +15,10 @@ const BasicInfo = ({ description }) => {
 					</span> Basic Info:
 				</span>
 				<p className="abstract">
-					{description}
+					<i>{description || <SuggestLink whatLacks='description' to={athleteId} />}</i>
 				</p>
 			</div>
-			<div className="honours">
-				<span className="team-honours-title">
-					<span className="honours-icon">
-						<i className="fa fa-trophy" aria-hidden="true"></i>
-					</span> Honours:
-				</span>
-				<div className="team-honours">
-					<h4 className="team">Barcelona</h4>
-					<ul className="events">
-						<li>Copa del Rey - 2004</li>
-						<li>Copa Emílio Santiago - 2005</li>
-						<li>Campeonato Español - 2005 </li>
-						<li>UEFA Champions League - 2007</li>
-					</ul>
-				</div>
-				<div className="team-honours">
-					<h4 className="team">Borussia Dortmund</h4>
-					<ul className="events">
-						<li>Coupe Champs Elyseé - 2007</li>
-						<li>Herr Coupe Santiago Barnabé - 2007</li>
-						<li>Dustche Matchndhör- 2007 </li>
-						<li>UEFA Champions League - 2008</li>
-					</ul>
-				</div>
-			</div>
+			<Honours honours={honours} />
 		</div>
 	);
 };
