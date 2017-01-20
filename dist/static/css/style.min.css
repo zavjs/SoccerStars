@@ -7,7 +7,6 @@ body {
 }
 
 .blunt-bg {
-	background-color: #f2f2f2;
 }
 
 .inline-block {
@@ -16,9 +15,6 @@ body {
 
 .text-center {
 	text-align: center;
-}
-
-.app-container {
 }
 
 .app-content {
@@ -42,8 +38,6 @@ body {
 	padding: 4px 0;
 }
 
-h2.page-title.text-center {}
-
 .page-title a {
 	color: #d9d999;
 	text-decoration: none;
@@ -54,11 +48,11 @@ h2.page-title.text-center {}
 }
 
 .athlete {
-    display: block;
+    display: inline-block;
     padding: 0;
     position: relative;
-    width: 100%;
-    min-width: 150px;
+    width: calc(50% - .75em);
+    /* min-width: 150px; */
     min-height: 75px;
 }
 
@@ -97,15 +91,14 @@ h2.page-title.text-center {}
 }
 
 .wrapper {
-	border: 1px solid #d9d9d9;
 }
 
 .toggle-button {
-    border: 1px solid #a9a9a9;
     margin-right: 5px;
     color: #a9a9a9;
     padding: 10px;
-    border-radius: 3px;
+    /* border-radius: 3px; */
+    border: 1px solid #d9d9d9;
 }
 
 .active {
@@ -135,20 +128,20 @@ h2.page-title.text-center {}
     padding-right: 15px;
 }
 
-.item-name h2 {
+.item-name {
 	font-size: 1.2em;
 	margin: 10px 0;
 }
 
-.athlete.list:nth-child(even) {
+.list:nth-child(even) {
 	background-color: #f2f2f2;
 }
 
-.athlete.list:nth-child(odd) {
+.list:nth-child(odd) {
 	background-color: #f7f7f7;
 }
 
-.athlete.grid {
+.grid {
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
@@ -163,7 +156,7 @@ h2.page-title.text-center {}
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	box-shadow: 0px 0px 1px 1px #555;
+	box-shadow: 0 0 1px 1px #555;
 	border: 10px solid #f7f7f7;
 }
 
@@ -179,19 +172,16 @@ h2.page-title.text-center {}
 }
 
 /* GRID VERSION */
-.athlete.grid {
-	border: 1px solid #ccc;
-	//
-	margin: 0 1em 1em 0;
+.grid {
+	/* border: 1px solid #ccc; */
 	max-width: 275px;
-	margin: 0 auto 1em;
 }
 
-.athlete.grid .athlete-image { 
+.grid .athlete-image { 
 	max-width: 100%;
 }
 
-.athlete.grid .athlete-name {
+.grid .athlete-name {
     font-size: 1.6em;
     overflow: hidden;
     width: 100%;
@@ -199,16 +189,16 @@ h2.page-title.text-center {}
     padding: 8px;
 }
 
-.athlete.grid .athlete-votes {
+.grid .athlete-votes {
 	position: absolute;
 	top: 2px;
-    right: 2px;
+	right: 2px;
 	background-color: #fff;
 	padding: 5px;
+	display: none;
 }
 
 .control-panel {
-	background-color: #f2f2f2;
 	padding: 10px;
 }
 
@@ -218,7 +208,10 @@ h2.page-title.text-center {}
 .control-panel input {
 	width: 100%;
 	padding: 5px;
+	border: none;
 	min-height: 45px;
+	border: 1px solid #d9d9d9;
+	/* border-radius: 3px; */
 }
 
 .search {
@@ -244,10 +237,6 @@ h2.page-title.text-center {}
 .view-controls {
     border-right: 1px solid #999;
     margin-right: 5px;
-}
-
-.athlete-inner {
-	/* border-radius: 3px; */
 }
 
 .athlete-inner .cover {
@@ -296,7 +285,6 @@ h2.page-title.text-center {}
 	width: 100%;
 }
 
-
 footer {
 	padding: 8px 0;
 }
@@ -310,21 +298,19 @@ footer p {
 }
 
 .main-header {
-	background-color: #fff;
 	text-align: center;
 	z-index: 2;
 	overflow: hidden;
 	background-color: #f2f2f2;
 }
 
-h2.page-title.text-center::after {
+.page-title::after {
     content: "";
     width: 120px;
     height: 120px;
     position: absolute;
     background-image: url(/public/img/soccer-ball22.png);
     top: -10px;
-    right: -60px;
     z-index: -1;
     background-size: 100%;
     left: 0;
@@ -335,32 +321,33 @@ h2.page-title.text-center::after {
     transition: all 2s;
 }
 
-h2.page-title:hover ::after {
+.page-title:hover ::after {
 	width: 110%;
 	height: 110%;
 }
 
 .athlete-content {
-	margin-top: 10px;
+	margin: 0.75em;
 }
 
 
 .athlete-info,
-.twitter-feed {
+.twitter-feed,
+.honours {
 	padding: 10px;
-    background-color: #fff;
-    border: 1px solid #f2f2f2;
+	background-color: #fff;
+	border: 1px solid #f2f2f2;
+	width: 100%;
+	margin-bottom: 0.75em;
 }
 
 .athlete-info {
-    margin-top: 10px;
     position: relative;
 }
 
-.athlete-info i {
-	position: absolute;
-	top: 7px;
-	left: 9px;
+.athlete-info-icon i,
+.twitter-icon i,
+.honours-icon i {
 	padding: 5px;
 	width: 25px;
 	height: 25px;
@@ -369,14 +356,54 @@ h2.page-title:hover ::after {
 	border-radius: 12px;
 	text-align: center;
 	color: #337ab7;
+	margin-right: 3px;
 }
 
-.athlete-info p {
-	text-indent: 30px;
+.twitter-icon {
+	text-align: center;
+	position: relative;
 }
 
 .twitter-status {
 	border-bottom: 1px solid #f2f2f2;
+	padding: 12px 5px;
+}
+
+.twitter-feed-title,
+.team-honours-title,
+.basic-info-title {
+    border-bottom: 1px solid #f2f2f2;
+    width: 100%;
+    display: block;
+    padding: 0 5px 10px 0;
+}
+
+.athlete-content {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+
+.athlete-info {
+	-ms-flex-order: 0;
+	order: 0;
+}
+
+.team {
+	margin-top: 5px;
+	padding-left: 10px;
+}
+
+.events {
+    padding-left: 20px;
+    list-style: none;
+}
+
+.team-honours {
+    padding: 5px 0;
 }
 
 @keyframes spin { 
@@ -386,7 +413,7 @@ h2.page-title:hover ::after {
 }
 
 @media only screen and (min-width: 481px) {
-	.athlete.grid {
+	.grid {
 		display: inline-block;
 		margin: .5em;
 		width: calc(50% - 1em);
@@ -408,11 +435,11 @@ h2.page-title:hover ::after {
     	margin: 0;
 	}
 
-	.athlete-tab.inactive-tab {
+	.inactive-tab {
 		width: 190px;
 	}
 
-	.athlete-tab {
+	.athlete-tab:not(.inactive-tab) {
 		width: auto;
 	}
 
@@ -427,24 +454,39 @@ h2.page-title:hover ::after {
 }
 
 @media only screen and (min-width: 568px) {
-	.athlete.grid {
-		width: calc(33.333% - 1em);
+	.grid {
+		width: calc(25% - 1em);
 	}
 }
 
 @media only screen and (min-width: 768px) {
-	.athlete.grid {
-		width: calc(25% - 1em);
+	.grid {
+		width: calc(20% - 1em);
 	}
 
 	.app-content {
 		padding-top: 25px
 	}
 
-	.athlete-info {
-		width: calc(45% - 1em);
-		padding: 19px 15px;
+	.athlete-info,
+	.twitter-feed {
 		display: inline-block;
-		margin: 0 1em 0 0;
+		vertical-align: top;
+	}
+
+	.athlete-basic-info {
+		width: calc(45% - .375em);
+		margin: 0 .375em 0 0;
+		-ms-flex-order: 0;
+		order: 0;
+	}
+
+	.twitter-feed {
+		width: calc(55% - .375em);
+		margin: 0 0 0 .375em;
+	}
+
+	.athlete-content {
+		margin: .75em 0;
 	}
 }
