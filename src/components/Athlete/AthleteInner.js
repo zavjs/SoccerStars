@@ -12,11 +12,11 @@ class AthleteInner extends React.Component {
 			redditFeed: []
 		};
 
-		this.getLatestTweets = this.getLatestTweets.bind(this);
-		this.setLatestTweets = this.setLatestTweets.bind(this);
+		this.getLatestReddits = this.getLatestReddits.bind(this);
+		this.setLatestReddits = this.setLatestReddits.bind(this);
 	}
 
-	setLatestTweets (result) {
+	setLatestReddits (result) {
 		if(result.data && result.data.children) {
 			this.setState({
 				redditFeed: result.data.children
@@ -24,17 +24,17 @@ class AthleteInner extends React.Component {
 		}
 	}
 
-	getLatestTweets () {
+	getLatestReddits () {
 		const { id } = this.props.params;
 		const SUBREDDIT = athletes.filter((athlete) => athlete.id === id)[0].subreddit;
 		
 		fetch(`https://www.reddit.com/r/${SUBREDDIT}.json`)
 			.then(response => response.json())
-			.then(json => this.setLatestTweets(json));
+			.then(json => this.setLatestReddits(json));
 	}
 
 	componentDidMount() {
-		this.getLatestTweets();
+		this.getLatestReddits();
 	}
 
 	render () {
