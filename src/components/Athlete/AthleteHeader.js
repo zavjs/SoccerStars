@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import AthleteHeaderItem from 'components/Athlete/AthleteHeaderItem';
 
 const AthleteHeader = ({ coverImage, athleteName, athletePicture, athleteId }) => {
 	const bgImage = `url("/public/img/${coverImage}")`;
@@ -19,18 +19,22 @@ const AthleteHeader = ({ coverImage, athleteName, athletePicture, athleteId }) =
 				<div className="athlete-tab text-center inline-block inactive-tab">
 
 				</div>
-				<div className="athlete-tab text-center inline-block active">
-					<Link to={`/athlete/${athleteId}/main`}>Main</Link>
-				</div>
-				<div className="athlete-tab text-center inline-block ">
-					<Link to={`/athlete/${athleteId}/chat`}>Chat</Link>
-				</div>
-				<div className="athlete-tab text-center inline-block ">
-					<Link to={`/athlete/${athleteId}/photos`}>Photos</Link>
-				</div>
-				<div className="athlete-tab text-center inline-block ">
-					<Link to={`/athlete/${athleteId}/videos`}>Videos</Link>
-				</div>
+				<AthleteHeaderItem 
+					athleteId={athleteId} 
+					section='main' 
+					title='Main' />
+				<AthleteHeaderItem 
+					athleteId={athleteId} 
+					section='chat' 
+					title='Chat' />
+				<AthleteHeaderItem 
+					athleteId={athleteId} 
+					section='photos' 
+					title='Photos' />
+				<AthleteHeaderItem 
+					athleteId={athleteId} 
+					section='videos'
+					title='Videos' />
 			</div>
 		</header>
 	);

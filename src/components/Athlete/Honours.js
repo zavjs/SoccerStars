@@ -12,7 +12,7 @@ const Honours = ({ honours }) => {
 			<span className="team-honours-title">
 				<span className="honours-icon">
 					<i className="fa fa-trophy" aria-hidden="true"></i>
-				</span> Honours: 
+				</span> Honours & Records: 
 				<span className="badge title-badge">
 					{ numberOfTitles }
 				</span>
@@ -22,8 +22,7 @@ const Honours = ({ honours }) => {
 				return (
 					<TeamHonours team={honour.team} events={honour.honours} />
 				);
-			}
-			)}
+			})}
 			</div>
 		</div>
 	)

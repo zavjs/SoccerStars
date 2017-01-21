@@ -36,10 +36,36 @@ const athletes = [
 					{ 'year': '2014', 'event': 'La Liga' },
 					{ 'year': '2015', 'event': 'La Liga' },
 					{ 'year': '2013', 'event': 'Supercopa de España' },
-					{ 'year': '2016', 'event': 'Supercopa de España' }
+					{ 'year': '2016', 'event': 'Supercopa de España' },
+					{ 'year': '2014-15', 'event': 'UEFA Champions League' },
+					{ 'year': '2015', 'event': 'UEFA Super Cup' },
+					{ 'year': '2015', 'event': 'FIFA World Cup' }
+				]
+			},
+			{
+				'team': 'Individual',
+				'honours': [
+					{ 'year': '2011', 'event': 'World Soccer Young Player of The Year' },
+					{ 'year': '2011', 'event': 'Campeonato Brasileiro - Best Player' },
+					{ 'year': ['2010', '2011'], 'event': 'Brazilian Silver Ball' },
+					{ 'year': '2011', 'event': 'Brazilian Golden Ball' },
+					{ 'year': '2011', 'event': 'FIFA Puskás Award' },
+					{ 'year': '2011', 'event': 'Copa Libertadores MVP' },
+					{ 'year': '2014', 'event': 'FIFA World Cup Bronze Boot' },
+					{ 'year': '2014', 'event': 'FIFA World Cup Dream Team' },
+					{ 'year': ['2014', '2015'], 'event': 'Samba Gold' } 
+				]
+			},
+			{
+				'team': 'Records',
+				'honours': [
+					{ 'event': 'Copa do Brasil Top Scorer', 'year': '2010' },
+					{ 'event': 'South American Youth Championship', 'year': '2011' },
+					{ 'event': 'Campeonato Paulista Top Scorer', 'year': '2012' },
+					{ 'event': 'Copa Libertadores Top Scorer', 'year': '2012' },
+					{ 'event': 'UEFA Champions League Top Scorer', 'year': '2014-15' }
 				]
 			}
-
 		],
 		voted: false,
 	},

@@ -23,9 +23,17 @@ body {
 	margin: 0 auto;
 }
 
+.honour-content,
+.reddit-container {
+	overflow-y: auto;
+}
+
 .honour-content {
-    max-height: 450px;
-    overflow-y: auto;
+	max-height: 450px;
+}
+
+.reddit-container {
+	max-height: 550px;
 }
 
 .page-title {
@@ -431,11 +439,6 @@ footer p {
 
 .abstract {
 	padding: 5px;
-}
-
-.reddit-container {
-    max-height: 425px;
-    overflow-y: auto;
 }
 
 .reddit-status-title {

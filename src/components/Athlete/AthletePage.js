@@ -1,10 +1,10 @@
 import React from 'react';
 import athletes from 'data/athletes';
-import BasicInfo from 'components/Athlete/BasicInfo';
-import RedditFeed from 'components/Athlete/RedditFeed';
+import AthleteBasicInfo from 'components/Athlete/AthleteBasicInfo';
 import AthleteHeader from 'components/Athlete/AthleteHeader';
+import RedditFeed from 'components/Athlete/RedditFeed';
 
-class AthleteInner extends React.Component {
+class AthletePage extends React.Component {
 
 	constructor (props) {
 		super(props);
@@ -53,7 +53,7 @@ class AthleteInner extends React.Component {
 
 					<div className="athlete-content">
 
-						<BasicInfo 
+						<AthleteBasicInfo 
 							athleteId={player.id}
 							description={player.description} 
 							honours={player.honours} />
@@ -66,5 +66,4 @@ class AthleteInner extends React.Component {
 	}
 }
 
-export default AthleteInner;
-
+export default AthletePage

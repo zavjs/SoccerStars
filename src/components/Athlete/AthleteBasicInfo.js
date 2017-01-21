@@ -2,7 +2,7 @@ import React from 'react';
 import Honours from 'components/Athlete/Honours';
 import SuggestLink from 'components/SuggestLink';
 
-const BasicInfo = ({ description, honours, athleteId }) => {
+const AthleteBasicInfo = ({ description, honours, athleteId }) => {
 
 	const noDescription = 'This athlete has no description. Suggest one.';
 
@@ -23,4 +23,4 @@ const BasicInfo = ({ description, honours, athleteId }) => {
 	);
 };
 
-export default BasicInfo;
+export default AthleteBasicInfo;
