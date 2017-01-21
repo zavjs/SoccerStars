@@ -4,12 +4,6 @@ import BasicInfo from 'components/Athlete/BasicInfo';
 import RedditFeed from 'components/Athlete/RedditFeed';
 import AthleteHeader from 'components/Athlete/AthleteHeader';
 
-const PATH_BASE = 'https://api.twitter.com/1.1/search/tweets.json'
-const PATH_SEARCH = '/search'
-const PARAM_SEARCH = 'query='
-const PARAM_PAGE = 'page='
-const PARAM_HPP = 'hitsPerPage='
-
 class AthleteInner extends React.Component {
 
 	constructor (props) {
@@ -23,9 +17,7 @@ class AthleteInner extends React.Component {
 	}
 
 	setLatestTweets (result) {
-
 		if(result.data && result.data.children) {
-
 			this.setState({
 				redditFeed: result.data.children
 			});
@@ -33,7 +25,10 @@ class AthleteInner extends React.Component {
 	}
 
 	getLatestTweets () {
-		fetch(`https://www.reddit.com/r/soccer.json`)
+		const { id } = this.props.params;
+		const SUBREDDIT = athletes.filter((athlete) => athlete.id === id)[0].subreddit;
+		
+		fetch(`https://www.reddit.com/r/${SUBREDDIT}.json`)
 			.then(response => response.json())
 			.then(json => this.setLatestTweets(json));
 	}
@@ -43,27 +38,25 @@ class AthleteInner extends React.Component {
 	}
 
 	render () {
+
 		const { id } = this.props.params;
-
-		const ourSoccerStar = athletes.filter((athlete) => athlete.id === id)[0];
-
-		const pic_alt = ourSoccerStar.known_as + ' main picture.';
-
+		const player = athletes.filter((athlete) => athlete.id === id)[0];
+		
 		return (
 			<div className="athlete-inner">
 				<article>
 					<AthleteHeader 
-						coverImage={ourSoccerStar.cover}
-						athletePicture={ourSoccerStar.image} 
-						athleteName={ourSoccerStar.known_as} 
-						athleteId={ourSoccerStar.id } />
+						coverImage={player.cover}
+						athletePicture={player.image} 
+						athleteName={player.known_as} 
+						athleteId={player.id } />
 
 					<div className="athlete-content">
 
 						<BasicInfo 
-							athleteId={ourSoccerStar.id}
-							description={ourSoccerStar.description} 
-							honours={ourSoccerStar.honours} />
+							athleteId={player.id}
+							description={player.description} 
+							honours={player.honours} />
 
 						<RedditFeed feed={this.state.redditFeed} />
 					</div>

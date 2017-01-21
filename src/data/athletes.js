@@ -18,6 +18,7 @@ const athletes = [
 		'cover': 'neymar-jr-cover.jpg',
 		'link': 'https://en.wikipedia.org/wiki/Neymar',
 		'goals': 129,
+		'subreddit': 'neymar',
 		'honours': [
 			{
 				'team': 'Santos',
@@ -57,6 +58,7 @@ const athletes = [
 		'cover': 'lionel-messi-cover.jpg',
 		'link': 'https://en.wikipedia.org/wiki/Lionel_Messi',
 		'goals': 723,
+		'subreddit': 'messi',
 		'honours': [
 			{
 				'team': 'Barcelona',
@@ -91,6 +93,7 @@ const athletes = [
 		'cover': 'zlatan-ibrahimovic-cover.jpg',
 		'link': 'https://en.wikipedia.org/wiki/Zlatan_Ibrahimović',
 		'goals': 528,
+		'subreddit': 'zlatan',
 		'honours': [
 			{
 				'team': 'Barcelona',
@@ -128,6 +131,7 @@ const athletes = [
 		'image': 'carlos-tevez.jpg',
 		'cover': 'carlos-tevez-cover.png',
 		'link': 'https://en.wikipedia.org/wiki/Carlos_Tevez',
+		'subreddit': 'soccer',
 		'goals': 243,
 		'honours': [
 			{
@@ -176,6 +180,7 @@ const athletes = [
 		'cover': 'pierre-aubameyang-cover.jpg',
 		'link': 'https://en.wikipedia.org/wiki/Pierre-Emerick_Aubameyang',
 		'goals': 161,
+		'subreddit': 'borussiadortmund',
 		'honours': [
 			{
 				'team': 'AS Saint-Étienne',
@@ -209,6 +214,7 @@ const athletes = [
 		'cover': 'thierry-henry-cover.jpg',
 		'link': 'https://en.wikipedia.org/wiki/Thierry_Henry',
 		'goals': 161,
+		'subreddit': 'soccer',
 		'honours': [
 			{
 				'team': 'Arsenal',
