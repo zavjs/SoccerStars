@@ -126,7 +126,7 @@ const athletes = [
 		'position': 'Forward',
 		'upvotes': 321,
 		'image': 'carlos-tevez.jpg',
-		'cover': 'carlos-tevez-cover.jpg',
+		'cover': 'carlos-tevez-cover.png',
 		'link': 'https://en.wikipedia.org/wiki/Carlos_Tevez',
 		'goals': 243,
 		'honours': [
@@ -242,4 +242,4 @@ const athletes = [
 	}
 ];
 
-export default athletes;
+module.exports = athletes;

@@ -1,20 +1,45 @@
 import React from 'react';
 import athletes from 'data/athletes';
 import BasicInfo from 'components/Athlete/BasicInfo';
-import TwitterFeed from 'components/Athlete/TwitterFeed';
+import RedditFeed from 'components/Athlete/RedditFeed';
 import AthleteHeader from 'components/Athlete/AthleteHeader';
+
+const PATH_BASE = 'https://api.twitter.com/1.1/search/tweets.json'
+const PATH_SEARCH = '/search'
+const PARAM_SEARCH = 'query='
+const PARAM_PAGE = 'page='
+const PARAM_HPP = 'hitsPerPage='
 
 class AthleteInner extends React.Component {
 
 	constructor (props) {
 		super(props);
 		this.state = {
-			tweets: []
+			redditFeed: []
 		};
+
+		this.getLatestTweets = this.getLatestTweets.bind(this);
+		this.setLatestTweets = this.setLatestTweets.bind(this);
+	}
+
+	setLatestTweets (result) {
+
+		if(result.data && result.data.children) {
+
+			this.setState({
+				redditFeed: result.data.children
+			});
+		}
+	}
+
+	getLatestTweets () {
+		fetch(`https://www.reddit.com/r/soccer.json`)
+			.then(response => response.json())
+			.then(json => this.setLatestTweets(json));
 	}
 
 	componentDidMount() {
-	
+		this.getLatestTweets();
 	}
 
 	render () {
@@ -40,7 +65,7 @@ class AthleteInner extends React.Component {
 							description={ourSoccerStar.description} 
 							honours={ourSoccerStar.honours} />
 
-						<TwitterFeed />
+						<RedditFeed feed={this.state.redditFeed} />
 					</div>
 				</article>
 			</div>

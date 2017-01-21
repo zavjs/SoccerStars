@@ -1,6 +1,6 @@
 var express = require('express');
-
 var app = express();
+var athletes = require('./src/data/athletes');
 
 app.set('port', (process.env.PORT || 5000));
 

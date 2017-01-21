@@ -433,6 +433,15 @@ footer p {
 	padding: 5px;
 }
 
+.reddit-container {
+    max-height: 425px;
+    overflow-y: auto;
+}
+
+.reddit-status-title {
+    margin-bottom: 10px;
+}
+
 @keyframes spin { 
 	100% { 
 		transform:rotate(360deg); 
