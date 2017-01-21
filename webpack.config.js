@@ -7,7 +7,7 @@ const src = join(root, 'src');
 const dist = join(root, 'dist');
 
 module.exports = {
-	entry: './src/app.js',
+	entry: ['./src/app.js', 'whatwg-fetch'],
 	output: {
 		path: join(dist, 'static', 'js'),
 		filename: 'bundle.js'

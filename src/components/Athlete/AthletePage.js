@@ -3,6 +3,7 @@ import athletes from 'data/athletes';
 import AthleteBasicInfo from 'components/Athlete/AthleteBasicInfo';
 import AthleteHeader from 'components/Athlete/AthleteHeader';
 import RedditFeed from 'components/Athlete/RedditFeed';
+import 'whatwg-fetch';
 
 class AthletePage extends React.Component {
 
