@@ -1,4 +1,5 @@
 import React from 'react';
+import Spinner from 'components/Spinner';
 
 const RedditFeed = ({ feed }) => {
 
@@ -10,7 +11,7 @@ const RedditFeed = ({ feed }) => {
 				</span> Reddit Feed:
 			</span>
 			<div className="reddit-container">
-			{ feed.map(item => 
+			{ feed.length > 0 ? feed.map(item => 
 				<p className="twitter-status">
 					<div className="reddit-status-title">
 						<a target="_blank" href={`https://www.reddit.com/user/${item.data.author}`}>@{item.data.author}</a> -   
@@ -25,7 +26,7 @@ const RedditFeed = ({ feed }) => {
 							Your browser does not support the video tag.
 						</video>: '' }
 				</p>
-			)}
+			) : <Spinner /> }
 			</div>
 		</div>
 	);

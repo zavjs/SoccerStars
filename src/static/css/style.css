@@ -442,6 +442,12 @@ footer p {
     margin-bottom: 10px;
 }
 
+.spinner {
+    margin: 20px;
+    font-size: 1.8em;
+    color: #337ab7;
+}
+
 @keyframes spin { 
 	100% { 
 		transform:rotate(360deg); 

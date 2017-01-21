@@ -96,24 +96,62 @@ const athletes = [
 		'subreddit': 'zlatan',
 		'honours': [
 			{
+				'team': 'Ajax',
+				'honours': [
+					{ 'year': ['2001-02', '2003-04'], 'event': 'Eredivise' },
+					{ 'year': '2001-02', 'event': 'KNVB Cup' },
+					{ 'year': '2002', 'event': 'Johan Crujiff Schaal' },
+					{ 'year': ['2001', '2002', '2003', '2004'], 'event': 'Amsterdam Tournament' }, 
+				]
+			},
+			{
+				'team': 'Juventus',
+				'honours': [
+					{ 'year': '2005', 'event': 'Joan Gamper' },
+				]
+			},
+			{
+				'team': 'Internazionale',
+				'honours': [
+					{ 'event': 'Serie A', 'year': ['2006-07', '2007-08', '2008-09'] },
+					{ 'event': 'Supercoppa Italiana', 'year': ['2006', '2008'] },
+					{ 'event': 'Eusébio Cup', 'year': '2008' }
+				]
+			},
+			{
 				'team': 'Barcelona',
 				'honours': [
-					{ 'year': '2001-02', 'event': 'Eredivise' },
-					{ 'year': '2001-02', 'event': 'KNVB Cup' },
-					{ 'year': '2002', 'event': 'Johan Cruyff Shielf' },
-					{ 'year': '2004', 'event': 'Serie A' },
-					{ 'year': '2006-07', 'event': 'Serie A' },
-					{ 'year': '2007-08', 'event': 'Serie A' },
-					{ 'year': '2008-09', 'event': 'Serie A' },
-					{ 'year': '2008', 'event': 'Supercopa Italiana' },
-					{ 'year': '2009-10', 'event': 'La Liga'},
-					{ 'year': '2009', 'event': 'Supercopa de España' },
-					{ 'year': '2010', 'event': 'Supercopa de España' },
-					{ 'year': '2010-11', 'event': 'Serie A' },
-					{ 'year': '2011', 'event': 'Supercoppa Italiana' }
+					{ 'event': 'La Liga', 'year': '2009-10' },
+					{ 'event': 'Supercopa España', 'year': ['2009', '2010'] },
+					{ 'event': 'UEFA Super Cup', 'year': '2009' },
+					{ 'event': 'FIFA Club World Cup', 'year': '2009' }
+				]
+			},
+			{
+				'team': 'Milan',
+				'honours': [
+					{ 'event': 'Serie A', 'year': '2010-11' },
+					{ 'event': 'Supercoppa Italiana', 'year': '2011' },
+				]
+			},
+			{
+				'team': 'Manchester United',
+				'honours': [
+					{ 'event': 'FA Community Shield', 'year': '2016' }
+				]
+			},
+			{
+				'team': 'Individual',
+				'honours': [
+					{ 'event': 'Swedish Football Personality of The Year', 'year': '2002' },
+					{ 'event': 'Eurosport Goal of The Year', 'year': '2004' },
+					{ 'event': 'UEFA Euro 2004 - Man of The Match', 'year': '2004' },
+					{ 'event': 'Serie A Most Loved Player', 'year': '2005' },
+					{ 'event': 'UEFA Euro 2008 - Man of The Match', 'year': '2008' },
+					{ 'event': 'UEFA Euro 2012 - Man of The Match', 'year': '2012' },
+					{ 'event': 'Swedish Male Athlete of The Year', 'year': ['2008', '2010', '2013', '2015'] }
 				]
 			}
-
 		],
 		voted: false
 	},
@@ -158,8 +196,23 @@ const athletes = [
 					{ 'year': '2007-08', 'event': 'UEFA Champions League' },
 					{ 'year': '2008', 'event': 'FIFA World Cup' }
 				]
+			},
+			{
+				'team': 'Manchester City',
+				'honours': [
+					{ 'event': 'Premiere League', 'year': '2011-12' },
+					{ 'event': 'FA Cup', 'year': '2010-11' },
+					{ 'event': 'FA Community Shieald', 'year': '2012' } 
+				]
+			},
+			{
+				'team': 'Juventus',
+				'honours': [
+					{ 'event': 'Serie A', 'year': ['2013-14', '2014-15'] },
+					{ 'event': 'Supercoppa Italiana', 'year': '2013' },
+					{ 'event': 'Coppa Italia', 'year': '2014-15' } 
+				]
 			}
-
 		],
 		voted: false
 	},
@@ -226,6 +279,10 @@ const athletes = [
 					{ 
 						'year': ['2001-02', '2002-03'], 
 						'event': 'FA Cup' 
+					},
+					{
+						'year': ['2002', '2004'],
+						'event': 'FA Community Shield'
 					}
 				]
 			},
@@ -237,9 +294,16 @@ const athletes = [
 						'event': 'La Liga' 
 					},
 					{ 'year': '2008-09', 'event': 'Copa del Rey' },
-					{ 'year': '2009', 'event': 'Supercopa de España' },
-					{ 'year': '2008-09', 'event': 'UEFA Champions League' },
-					{ 'year': '2009', 'event': 'FIFA World Cup' }
+					{ 'year': '2009', 'event': 'Supercopa de España' }
+				]
+			},
+			{
+				'team': 'New York Red Bulls',
+				'honours': [
+					{
+						'year': '2013', 
+						'event': 'MLS Supporters\'s Shield'
+					}
 				]
 			}
 
