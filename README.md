@@ -1,5 +1,5 @@
 # Soccer Stars - 2017
 
-This is an app that shows information about the important soccer players in dedicated pages. 
+This is an app that collects information about the most relevant soccer players in dedicated pages, including integration with the Reddit API.
 
-Includes Reddit API integration, covering subjects such as server-side rendering, progressive enhancement, and routing in React.
+It covered subjects such as server-side rendering, progressive enhancement, and routing in React.
