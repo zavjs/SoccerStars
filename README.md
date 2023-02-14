@@ -1,4 +1,4 @@
-# Soccer Stars - 2017
+# Soccer Stars - 2016
 
 This is an app that collects information about the most relevant soccer players in dedicated pages, including integration with the Reddit API.
 
